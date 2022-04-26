@@ -1,0 +1,16 @@
+{% extends  'base.html' %}
+
+{% block title %} Home {% endblock title %}
+<link rel="stylesheet" href="style.css">
+{% block content %}
+   <div class="jumbotron jumbotron-fluid" >
+       <div class="container" style="background-color: rgb(174, 207, 207); padding: 50px; margin-top: 30px; border-radius: 10px;">
+            <h1 class="display-2">Newspaper app</h1>
+            <p class="lead">A newspaper website built wiht django framework!</p>
+            <p class="lead">
+                <a class="btn btn-primary" href="{% url 'article_list' %}"
+                role="button">View All Articles</a>
+            </p>
+        </div>
+   </div>
+{% endblock content %}
