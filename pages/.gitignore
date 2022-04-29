@@ -24,6 +24,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.idea/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -103,10 +104,18 @@ ENV/
 .DS_Store
 *.sqlite3
 media/
+db.sqlite3
 *.pyc
 *.db
 *.pid
 
+# Editor directories and files
+.idea
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 # Ignore Django Migrations in Development if you are working on team
 
 # Only for Development only
