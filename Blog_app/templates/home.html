@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Home Page</h1>
+    <h2>Blogs :</h2>
+
+    {% for blog in all_blogs %}
+        <div class="post-entry">
+            <h2><a href="">{{blog.title}}</a></h2>
+            <p>{{blog.body}}</p>
+            <p>{{blog.author}}</p>
+        </div>
+    {% endfor %}
+
+{% endblock content %}
