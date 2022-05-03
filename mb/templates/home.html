@@ -1,6 +1,9 @@
-<h1>Messege board homepage</h1>
-<ul>
-    {% for post in posts_list  %}
-        <li>{{post}}</li>
-    {% endfor %}
-</ul>
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul>
+        {% for post in posts_list  %}
+            <li>{{post}}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
