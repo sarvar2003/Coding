@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="post-entry">
+<div class="post-entry">
+    <div class="details">
         <h2>{{blog.title}}</h2>
         <p>{{blog.body}}</p>
         <br>
         <p><span style="font-weight: 600; font-size: 20px;">Author: </span>{{blog.author}}</p>
+        <h4><a href="{% url 'update_blog' blog.pk %}">+ Edit Blog Post</a></h4>
+        <h4><a href="{% url 'delete_blog' blog.pk %}">- Delete Blog Post</a></h4>
     </div>
+</div>
+
 {% endblock content%}
