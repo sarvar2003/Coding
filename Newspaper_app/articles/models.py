@@ -9,6 +9,7 @@ class Article(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     date = models.DateTimeField(auto_now=True)
+
     author = models.ForeignKey(
         get_user_model(),
         on_delete = models.CASCADE,
@@ -22,7 +23,11 @@ class Article(models.Model):
 
         
 class Comment(models.Model): # new
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    article = models.ForeignKey(
+        Article,
+        on_delete=models.CASCADE,
+        related_name='comments',
+)
     comment = models.CharField(max_length=140)
     author = models.ForeignKey(
     get_user_model(),
